@@ -1,1 +1,11 @@
+version: '2'
+
+services:
+    web:
+        build: .
+        volumes:
+            - /srv/http/config/iso/default.conf:/etc/nginx/conf.d/default.conf
+            - /srv/http/share/iso:/usr/share/nginx/html
+        ports:
+            - 8000:80
 
